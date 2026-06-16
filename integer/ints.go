@@ -80,3 +80,12 @@ func Distance(a, b int) int {
 	}
 	return -x
 }
+
+func Pow(a, b int) int {
+	pow := 1
+	for b > 0 {
+		pow *= a
+	}
+
+	return pow
+}
