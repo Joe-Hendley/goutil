@@ -9,7 +9,9 @@ func Combinations[T any](lists [][]T) [][]T {
 				newCombinations = append(newCombinations, []T{item})
 			} else {
 				for _, combination := range combinations {
-					newCombination := append(combination, item)
+					temp := make([]T, len(combination))
+					copy(temp, combination)
+					newCombination := append(temp, item)
 					newCombinations = append(newCombinations, newCombination)
 				}
 			}
